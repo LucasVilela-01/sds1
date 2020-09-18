@@ -9,8 +9,8 @@ export type RecordItem = {
     name: string;
     age: number;
     gameTitle: string;
-    gamePlatform: PLatform;
+    gamePlatform: Platform;
     genreName: string;
 }
 
-export type PLatform = 'XBOX' | 'PC' | 'PLAYSTATION';
+export type Platform = 'XBOX' | 'PC' | 'PLAYSTATION';
