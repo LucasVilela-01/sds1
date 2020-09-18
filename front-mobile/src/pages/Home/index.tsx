@@ -2,34 +2,38 @@ import React from 'react';
 import { FontAwesome5 as Icon } from '@expo/vector-icons'; // Pacote de ícones do expo, FontAwesome5 é uma biblioteca externa
 import { Text, StyleSheet, View, Image, Alert } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
+import Header from '../../components/Header';
+import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
+    const navigation = useNavigation(); // Essa função permite navegar entre as rotas.
 
     const handleOnPress = () => {
-        Alert.alert('você clicou no botão!')
+        navigation.navigate('CreateRecord');
     }
 
     return (
         <>
-            <View style={styles.container}>
-                <Image 
-                    source={require('../../assets/gamer.png')}
-                    style={styles.gamerImage}
-                />
-                <Text style={styles.title}>Vote agora!</Text>
-                <Text style={styles.subTitle}>Nos diga qual é seu jogo favorito!</Text>
-            </View>
+          <Header />
+          <View style={styles.container}>
+            <Image 
+              source={require('../../assets/gamer.png')}
+              style={styles.gamerImage}
+            />
+            <Text style={styles.title}>Vote agora!</Text>
+            <Text style={styles.subTitle}>Nos diga qual é seu jogo favorito!</Text>
+          </View>
             <View style={styles.footer}>
-                <RectButton style={styles.button} onPress={handleOnPress}>
-                    <Text style={styles.buttonText}>
-                        COLETAR DADOS
-                    </Text>
-                    <View style={styles.buttonIcon}>
-                        <Text>
-                            <Icon name="chevron-right" color="#FFF" size={25} />
-                        </Text>
-                    </View>
-                </RectButton>
+              <RectButton style={styles.button} onPress={handleOnPress}>
+                <Text style={styles.buttonText}>
+                  COLETAR DADOS
+                </Text>
+                <View style={styles.buttonIcon}>
+                  <Text>
+                    <Icon name="chevron-right" color="#FFF" size={25} />
+                  </Text>
+                </View>
+              </RectButton>
             </View>
         </>
     );
