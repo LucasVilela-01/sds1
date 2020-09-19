@@ -106,6 +106,7 @@ const CreateRecord = () => {
                     />
                 </View>
                 <RNPickerSelect
+                useNativeAndroidPickerStyle={false}
                 // onValueChange é para quando o usuário mudar o item no combo de opções, precisa armazenar o valor que o usuário selecionou em algum lugar. 
                     onValueChange={value => {
                         setSelectedGame(value)
