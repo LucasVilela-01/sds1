@@ -1,0 +1,15 @@
+package com.devsuperior.dspesquisa.dto;
+
+import java.time.Instant;
+
+import com.devsuperior.dspesquisa.entities.enums.Platform;
+
+public class RecordDTO {
+	private Long id;
+	private Instant moment;
+	private String name;
+	private Integer age;
+	private String gameTitle;
+	private Platform gamePlatform;
+	private String genreName;
+}
