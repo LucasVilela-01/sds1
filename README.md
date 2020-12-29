@@ -75,4 +75,3 @@ yarn start
 Lucas Rodrigues Vilela Bota
 
 https://www.linkedin.com/in/lucasvilela-01/
-
