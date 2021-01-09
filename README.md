@@ -64,10 +64,10 @@ git clone https://github.com/LucasVilela-01/sds1
 cd front-web
 
 # instalar dependências
-yarn install
+npm install
 
 # executar o projeto
-yarn start
+npm start
 ```
 
 # Autor
